@@ -6,7 +6,7 @@
   "scripts": {
     "min-html": "./node_modules/.bin/html-minifier -c html-minifier.conf.json -o bundle/index.html index.html",
     "min-css": "./node_modules/.bin/csso -i styles.css -o bundle/styles.css && ./node_modules/.bin/csso -i bootstrap.css -o bundle/bootstrap.css",
-    "min-js": "./node_modules/.bin/uglifyjs --compress -o bundle/banner.js banner.js && ./node_modules/.bin/uglifyjs --compress --mangle -o bundle/scripts.js scripts.js",
+    "min-js": "./node_modules/.bin/uglifyjs --compress -o bundle/scripts.js scripts.js",
     "build": "npm run min-html && npm run min-js && npm run min-css"
   },
   "repository": {
