@@ -1,0 +1,27 @@
+{
+  "name": "shri2018-2-performance",
+  "version": "1.0.0",
+  "description": "Оптимизируйте страницу, выложите на GitHub Pages. Зайдите на https://shri-performance.ru и отправьте урл своей страницы.",
+  "main": "banner.js",
+  "scripts": {
+    "min-html": "./node_modules/.bin/html-minifier -c html-minifier.conf.json -o bundle/index.html index.html",
+    "min-css": "./node_modules/.bin/csso -i styles.css -o bundle/styles.css && ./node_modules/.bin/csso -i bootstrap.css -o bundle/bootstrap.css",
+    "min-js": "./node_modules/.bin/uglifyjs --compress -o bundle/banner.js banner.js && ./node_modules/.bin/uglifyjs --compress -o bundle/scripts.js scripts.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dalv96/shri2018-2-performance.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dalv96/shri2018-2-performance/issues"
+  },
+  "homepage": "https://github.com/dalv96/shri2018-2-performance#readme",
+  "devDependencies": {
+    "csso": "^3.5.1",
+    "html-minifier": "^3.5.21",
+    "uglify-js": "^3.4.9"
+  }
+}
